@@ -1,33 +1,34 @@
 <!doctype html> <html ng-app="myvcFrontApp"> <head> <meta charset="utf-8"> <title update-title>MyVc</title> <!--<base href="http://localhost:9000/">  Requerido por el html5 mode de Angular --> <script type="text/javascript">FileAPI = {
-        debug: true,
-        //forceLoad: true, html5: false //to debug flash in HTML5 browsers
-        //wrapInsideDiv: true, //experimental for fixing css issues
-        //only one of jsPath or jsUrl.
-        //jsPath: '/js/FileAPI.min.js/folder/',
-        //jsUrl: 'yourcdn.com/js/FileAPI.min.js',
+				debug: true,
+				//forceLoad: true, html5: false //to debug flash in HTML5 browsers
+				//wrapInsideDiv: true, //experimental for fixing css issues
+				//only one of jsPath or jsUrl.
+				//jsPath: '/js/FileAPI.min.js/folder/',
+				//jsUrl: 'yourcdn.com/js/FileAPI.min.js',
 
-        //only one of staticPath or flashUrl.
-        //staticPath: '/flash/FileAPI.flash.swf/folder/'
-        //flashUrl: 'yourcdn.com/js/FileAPI.flash.swf'
-    };</script> <meta name="description" content="Sistema de notas estudiantil"> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.71c9e7a3.css"> <link rel="stylesheet" href="styles/main.9fe35eeb.css"> <!--Fonts--> <!--
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
-    -->  <body keypress-events> <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> <!-- Site or application content  <div login-dialog ng-if="!isLoginPage"></div>--> <div ng-controller="ApplicationController"> <div ui-view="principal"></div> </div> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109619340-1"></script> <script>window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+				//only one of staticPath or flashUrl.
+				//staticPath: '/flash/FileAPI.flash.swf/folder/'
+				//flashUrl: 'yourcdn.com/js/FileAPI.flash.swf'
+		};</script> <meta name="description" content="Sistema de notas estudiantil"> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.71c9e7a3.css"> <link rel="stylesheet" href="styles/main.9fe35eeb.css"> <!--Fonts--> <!--
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">
+		-->  <body keypress-events> <!--[if lt IE 7]>
+			<p class="browsehappy">Estás usando un navegador <strong>desactualizado</strong>. Por favor <a href="http://browsehappy.com/">actuliza tu navegador</a> para mejorar tu experiencia.</p>
+		<![endif]--> <div style="position: absolute; background-image: url(images/Fondo-MyVc.4642adb6.jpg); height: 120%; margin-top: -200px; width: 100%;
+			size:cover; background-size:cover; background-attachment:fixed; background-repeat:no-repeat"> <div></div> </div> <!-- Site or application content  <div login-dialog ng-if="!isLoginPage"></div>--> <div ng-controller="ApplicationController"> <div ui-view="principal"></div> </div> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109619340-1"></script> <script>window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-      gtag('config', 'UA-109619340-1');</script> <script type="text/javascript">if(!document.getElementById('id-open-font')) {
-            var link = document.createElement('link');
-            link.id = 'id-open-font';
-            link.rel = 'stylesheet';
-            link.href = location.protocol + '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300';
-            document.head.appendChild(link);
-        }</script> <!--[if lt IE 9]>
-    <script src="scripts/oldieshim.150d4da6.js"></script>
-    <![endif]--> <script src="scripts/vendor.a59113bb.js"></script> <script src="scripts/scripts.e0958493.js"></script> <!--
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.0/angular-locale_es-es.js"></script>
+			gtag('config', 'UA-109619340-1');</script> <script type="text/javascript">if(!document.getElementById('id-open-font')) {
+						var link = document.createElement('link');
+						link.id = 'id-open-font';
+						link.rel = 'stylesheet';
+						link.href = location.protocol + '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300';
+						document.head.appendChild(link);
+				}</script> <!--[if lt IE 9]>
+		<script src="scripts/oldieshim.150d4da6.js"></script>
+		<![endif]--> <script src="scripts/vendor.3db7c526.js"></script> <script src="scripts/scripts.8ab2a662.js"></script> <!--
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.0/angular-locale_es-es.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.35/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.35/vfs_fonts.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.35/pdfmake.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.35/vfs_fonts.js"></script>
 -->  
