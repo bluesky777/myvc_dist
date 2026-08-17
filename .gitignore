@@ -1,15 +1,20 @@
 .DS_Store
-fonts/fontawesome-webfont.eot
-fonts/fontawesome-webfont.svg
-fonts/fontawesome-webfont.ttf
-fonts/fontawesome-webfont.woff
-fonts/fontawesome-webfont.woff2
-fonts/FontAwesome.otf
-styles/ui-grid.ttf
-styles/ui-grid.woff
+
+# El logo del colegio es POR CLIENTE y lo administra cada servidor, no este repo.
+#
+# LoginCtrl.js / PanelCtrl.js hacen $http.get('images/Logo_Colegio_Header.gif') y,
+# si responde 404, caen a logoPathDefault (images/Logo_MyVc_Header.gif). O sea que
+# el 404 es la señal de "este colegio no tiene logo propio". Si se versiona el
+# archivo aqui, todos los clientes reciben el mismo logo y un `git checkout -f`
+# pisa el logo propio de los que si lo tienen.
+#
+# images/Logo_Colegio_Header.sdc.gif si esta versionado: es el logo de un cliente
+# concreto, con sufijo escrito a mano, y no lo toca esta regla.
 images/Logo_Colegio_Header.gif
-images/Logo_MyVc_Header.gif
-images/book-library-2.png
-images/book-library-back-2.png
-images/book-library.png
-images/favicon.ico
+
+# El resto de la lista anterior (fonts/, styles/ui-grid.*, images/book-library*.png,
+# images/Logo_MyVc_Header.gif, images/favicon.ico) se elimino: son artefactos de
+# despliegue iguales para todos los clientes, y estar ignorados impedia que
+# llegaran al servidor. images/book-library-2.png y images/book-library-back-2.png
+# los referencia views/areas/listAsignaturas.tpl.html, y Logo_MyVc_Header.gif es el
+# fallback del logo, asi que los tres tienen que viajar en el repo.
