@@ -1,11 +1,20 @@
-# This repo is pure deploy output: everything here must be committed so that
-# `git pull` on each client subdomain gets a complete site.
-#
-# The previous list ignored fonts/, styles/ui-grid.* and six images/*. That made
-# sense under grunt, which emitted content-hashed copies (images/book-library.d72ef8e4.png)
-# alongside the plain-named sources, so only the hashed ones belonged in the deploy.
-# Vite serves images/ verbatim from app/public/, so the plain names ARE the deploy
-# artifacts now -- keeping those entries silently blocked images/book-library-2.png
-# and images/book-library-back-2.png, both referenced by views/.
-
 .DS_Store
+
+# El logo del colegio es POR CLIENTE y lo administra cada servidor, no este repo.
+#
+# LoginCtrl.js / PanelCtrl.js hacen $http.get('images/Logo_Colegio_Header.gif') y,
+# si responde 404, caen a logoPathDefault (images/Logo_MyVc_Header.gif). O sea que
+# el 404 es la señal de "este colegio no tiene logo propio". Si se versiona el
+# archivo aqui, todos los clientes reciben el mismo logo y un `git checkout -f`
+# pisa el logo propio de los que si lo tienen.
+#
+# images/Logo_Colegio_Header.sdc.gif si esta versionado: es el logo de un cliente
+# concreto, con sufijo escrito a mano, y no lo toca esta regla.
+images/Logo_Colegio_Header.gif
+
+# El resto de la lista anterior (fonts/, styles/ui-grid.*, images/book-library*.png,
+# images/Logo_MyVc_Header.gif, images/favicon.ico) se elimino: son artefactos de
+# despliegue iguales para todos los clientes, y estar ignorados impedia que
+# llegaran al servidor. images/book-library-2.png y images/book-library-back-2.png
+# los referencia views/areas/listAsignaturas.tpl.html, y Logo_MyVc_Header.gif es el
+# fallback del logo, asi que los tres tienen que viajar en el repo.
