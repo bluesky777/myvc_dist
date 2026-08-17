@@ -1,15 +1,11 @@
+# This repo is pure deploy output: everything here must be committed so that
+# `git pull` on each client subdomain gets a complete site.
+#
+# The previous list ignored fonts/, styles/ui-grid.* and six images/*. That made
+# sense under grunt, which emitted content-hashed copies (images/book-library.d72ef8e4.png)
+# alongside the plain-named sources, so only the hashed ones belonged in the deploy.
+# Vite serves images/ verbatim from app/public/, so the plain names ARE the deploy
+# artifacts now -- keeping those entries silently blocked images/book-library-2.png
+# and images/book-library-back-2.png, both referenced by views/.
+
 .DS_Store
-fonts/fontawesome-webfont.eot
-fonts/fontawesome-webfont.svg
-fonts/fontawesome-webfont.ttf
-fonts/fontawesome-webfont.woff
-fonts/fontawesome-webfont.woff2
-fonts/FontAwesome.otf
-styles/ui-grid.ttf
-styles/ui-grid.woff
-images/Logo_Colegio_Header.gif
-images/Logo_MyVc_Header.gif
-images/book-library-2.png
-images/book-library-back-2.png
-images/book-library.png
-images/favicon.ico
