@@ -16684,16 +16684,13 @@ ul.dropdown-menu(role="listbox")
                   <div ng-show="subunidad.editando" class="row">
                     <div ng-show="subunidad.editando" style="overflow: visible" class="ticket-user col-md-10 col-sm-12 no-padding-xs">
                       <form role="form" ng-submit="$ctrl.actualizarSubunidad(subunidad, unidad)" class="form-inline">
-                        <div style="padding: 0;" class="form-group unidaddefinicion col-md-8 col-sm-8 col-xs-12">
+                        <div style="padding: 0;" class="form-group unidaddefinicion col-md-10 col-sm-10 col-xs-12">
                           <label class="sr-only">Edite la definición</label>
                           <textarea required ng-model="subunidad.definicion" placeholder="Edite la definición" uib-tooltip="Definición" style="height: 35px;" class="form-control textarea-altura-xs"></textarea>
                         </div>
                         <div class="form-group unidadporcentaje col-md-2 col-sm-2 col-xs-12">
                           <label class="sr-only">Porcentaje</label>
                           <input required type="number" min="0" max="100" ng-model="subunidad.porcentaje" placeholder="%Porcentaje" uib-tooltip="Edite el porcentaje" style="padding: 5px;" class="form-control">
-                        </div>
-                        <div style="padding: 0;" class="form-group col-md-2 col-sm-2 col-xs-12 si-padding-lados-xs">
-                          <input required ng-model="subunidad.nota_default" min="0" max="100" type="number" placeholder="Nota por defecto" uib-tooltip="Nota por defecto de {{ $ctrl.SUBUNIDAD}}" class="form-control">
                         </div>
                       </form>
                     </div>
@@ -16711,15 +16708,12 @@ ul.dropdown-menu(role="listbox")
                 <div style="background-color: rgb(214, 225, 245);" ng-if="::$ctrl.USER.profes_pueden_editar_notas==1 || $ctrl.hasRoleOrPerm('Admin')" class="ticket-item">
                   <form ng-submit="$ctrl.addSubunidad(unidad)" class="row form-inline">
                     <div style="overflow: visible" class="ticket-user col-md-10 col-sm-12 no-padding-xs">
-                      <div style="padding: 0;" class="form-group unidaddefinicion col-md-8 col-sm-8 col-xs-12 no-padding-xs">
+                      <div style="padding: 0;" class="form-group unidaddefinicion col-md-10 col-sm-10 col-xs-12 no-padding-xs">
                         <label class="sr-only">{{ ::$ctrl.GENERO_SUB=='M' ? 'Nuevo' : 'Nueva' }} {{ ::$ctrl.SUBUNIDAD}}:</label>
                         <textarea required ng-model="unidad.newsubunidad.definicion" placeholder="Escribe {{ $ctrl.GENERO_SUB=='M' ? 'nuevo' : 'nueva' }} {{ $ctrl.SUBUNIDAD}}" uib-tooltip="Definición del {{ $ctrl.GENERO_SUB=='M' ? 'nuevo' : 'nueva' }} {{ $ctrl.SUBUNIDAD}}" tooltip-popup-delay="500" style="height: 35px;" class="form-control textarea-altura-xs"></textarea>
                       </div>
                       <div class="form-group unidadporcentaje col-md-2 col-sm-2 col-xs-12">
                         <input ng-model="unidad.newsubunidad.porcentaje" min="0" max="100" type="number" placeholder="%Porcentaje" uib-tooltip="Porcentaje {{ $ctrl.GENERO_SUB=='M' ? 'del' : 'de la' }} {{ $ctrl.SUBUNIDAD}}" tooltip-popup-delay="500" style="padding: 5px;" class="form-control">
-                      </div>
-                      <div style="padding: 0;" class="form-group col-md-2 col-sm-2 col-xs-12 si-padding-lados-xs">
-                        <input ng-model="unidad.newsubunidad.nota_default" min="0" max="100" type="number" placeholder="Nota por defecto" uib-tooltip="Nota por defecto {{  $ctrl.GENERO_SUB=='M' ? 'del' : 'de la' }} {{ $ctrl.SUBUNIDAD}}" tooltip-popup-delay="500" class="form-control">
                       </div>
                     </div>
                     <div class="ticket-type col-md-2 col-xs-12 text-center">
